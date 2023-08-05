@@ -48,7 +48,7 @@ return {
   },
 
   -- enable mini-animate
-  { import = "lazyvim.plugins.extras.ui.mini-animate" },
+  -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
 
   -- tweak neo-tree
   {
@@ -80,7 +80,6 @@ return {
       codewindow.setup({
         auto_enable = false,
       })
-      vim.api.nvim_set_hl(0, "CodewindowBorder", { fg = "#1D232C" })
       codewindow.apply_default_keybinds()
       codewindow.open_minimap()
     end,
