@@ -6,12 +6,13 @@ local function bind(mode, lhs, rhs)
 end
 
 bind("i", "jj", "<ESC>")
-bind("i", "gg", "<ESC>")
 bind("n", "ga", function()
   vim.lsp.buf.code_action({ apply = true })
 end)
 bind("n", "W", "<CMD>WhichKey<CR>")
-bind({ "n", "i" }, "<C-a>", "<ESC>^")
-bind({ "n", "i" }, "<C-e>", "<ESC>$")
+bind("i", "<C-a>", "<ESC>^i")
+bind("i", "<C-e>", "<ESC>$a")
+bind("n", "<C-a>", "<ESC>^")
+bind("n", "<C-e>", "<ESC>$")
 
 bind("n", "<Leader>h", "<CMD>HopWord<CR>")
